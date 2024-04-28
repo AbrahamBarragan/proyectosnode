@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Catalogo de productos</h1>
+    <a href="productos">productos</a>
+    <a href="clientes">clientes</a>
+    <a href="usuarios">usuarios</a>
+    <table border="1px">
+        <tr>
+          <th>Codigo del Proucto</th>
+          <th>Nombre del Producto</th>
+          <th>Precio del Producto</th>
+        </tr>
+        {% for producto in productos %}
+        <tr>
+          <td>
+            {{producto[0]}}
+          </td>
+          <td>
+            {{ producto[1] }}
+          </td>
+    
+          <td>
+            ${{ producto[2] }}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>

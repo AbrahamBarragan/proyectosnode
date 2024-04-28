@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Catalogo de productos</h1>
+    <a href="productos">productos</a>
+    <a href="clientes">clientes</a>
+    <a href="usuarios">usuarios</a>
+    <table border="1px">
+        <tr>
+          <th>id de usuario</th>
+          <th>Nombre del usuario</th>
+          <th>Apellido 1 del usuario</th>
+          <th>Apellido 2 del usuario</th>
+        </tr>
+        {% for USUARIO in usuarios %}
+        <tr>
+          <td>
+            {{ USUARIO[0] }}
+          </td>
+          <td>
+            {{ USUARIO[1] }}
+          </td>
+    
+          <td>
+            {{ USUARIO[2] }}
+          </td>
+          <td>
+            {{ USUARIO[3] }}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>
